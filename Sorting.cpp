@@ -111,7 +111,7 @@ void MergeSort(int a[], int low, int high)
 {
     if (low < high)
     {
-        int mid = low + (high-low)/2;
+        int mid = low + (high - low) / 2;
         MergeSort(a, low, mid);
         MergeSort(a, mid + 1, high);
         merge(a, low, mid, high);
@@ -227,7 +227,7 @@ int main()
     // Merge Sort
     else if (t == 5)
     {
-        MergeSort(a, 0, n-1);
+        MergeSort(a, 0, n - 1);
         printArray(a, n);
     }
 
@@ -238,6 +238,7 @@ int main()
         printArray(a, n);
     }
 
+    // Shell Sort
     else if (t == 7)
     {
         ShellSort(a, n);
